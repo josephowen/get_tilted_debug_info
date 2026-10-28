@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://c6cq84v4quyb5"]
+
+[ext_resource type="Script" uid="uid://1aig4f2o011d" path="res://scripts/debug_example.gd" id="1_03ry3"]
+[ext_resource type="LabelSettings" uid="uid://dclnvj0j8kprx" path="res://resources/debug_label_settings.tres" id="1_fwv6m"]
+
+[sub_resource type="Gradient" id="Gradient_jvqo8"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.1746988, 0.5180723)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_03ry3"]
+gradient = SubResource("Gradient_jvqo8")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="DebugExample" type="Control" unique_id=1627028015]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_03ry3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=911746105]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=672815692]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer" unique_id=31684949]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+columns = 2
+
+[node name="RawXVelocityLabelHeading" type="Label" parent="CenterContainer/GridContainer" unique_id=1813510191]
+layout_mode = 2
+text = "x velocity (raw):"
+label_settings = ExtResource("1_fwv6m")
+horizontal_alignment = 2
+
+[node name="RawXVelocityLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=1388551330]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_fwv6m")
+
+[node name="RawYVelocityLabelHeading" type="Label" parent="CenterContainer/GridContainer" unique_id=1722311671]
+layout_mode = 2
+text = "y velocity (raw):"
+label_settings = ExtResource("1_fwv6m")
+horizontal_alignment = 2
+
+[node name="RawYVelocityLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=1401660437]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_fwv6m")
+
+[node name="SmoothedXVelocityLabelHeading" type="Label" parent="CenterContainer/GridContainer" unique_id=2049789002]
+layout_mode = 2
+text = "x velocity (smoothed):"
+label_settings = ExtResource("1_fwv6m")
+horizontal_alignment = 2
+
+[node name="SmoothedXVelocityLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=1946069434]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_fwv6m")
+
+[node name="SmoothedYVelocityLabelHeading" type="Label" parent="CenterContainer/GridContainer" unique_id=1289492510]
+layout_mode = 2
+text = "y velocity (smoothed):"
+label_settings = ExtResource("1_fwv6m")
+horizontal_alignment = 2
+
+[node name="SmoothedYVelocityLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=615004033]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_fwv6m")
+
+[node name="RollLabelHeading" type="Label" parent="CenterContainer/GridContainer" unique_id=1603284502]
+layout_mode = 2
+text = "derived approx roll:"
+label_settings = ExtResource("1_fwv6m")
+horizontal_alignment = 2
+
+[node name="RollLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=471562974]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_fwv6m")
+
+[node name="PitchLabelHeading" type="Label" parent="CenterContainer/GridContainer" unique_id=451787182]
+layout_mode = 2
+text = "derived approx roll:"
+label_settings = ExtResource("1_fwv6m")
+horizontal_alignment = 2
+
+[node name="PitchLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=384233774]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_fwv6m")
+
+[node name="MaxXVelocityLabelHeading" type="Label" parent="CenterContainer/GridContainer" unique_id=454959638]
+layout_mode = 2
+text = "max x velocity:"
+label_settings = ExtResource("1_fwv6m")
+horizontal_alignment = 2
+
+[node name="MaxXVelocityLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=2007817174]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_fwv6m")
+
+[node name="MaxYVelocityLabelHeading" type="Label" parent="CenterContainer/GridContainer" unique_id=23982144]
+layout_mode = 2
+text = "max y velocity:"
+label_settings = ExtResource("1_fwv6m")
+horizontal_alignment = 2
+
+[node name="MaxYVelocityLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=1314291976]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_fwv6m")
+
+[node name="TopButtonLabelHeading" type="Label" parent="CenterContainer/GridContainer" unique_id=208007902]
+layout_mode = 2
+text = "top button pressed:"
+label_settings = ExtResource("1_fwv6m")
+horizontal_alignment = 2
+
+[node name="TopButtonLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=2007477015]
+unique_name_in_owner = true
+layout_mode = 2
+text = "   no"
+label_settings = ExtResource("1_fwv6m")
+
+[node name="BottomButtonLabelHeading" type="Label" parent="CenterContainer/GridContainer" unique_id=1508979088]
+layout_mode = 2
+text = "bottom button pressed:"
+label_settings = ExtResource("1_fwv6m")
+horizontal_alignment = 2
+
+[node name="BottomButtonLabel" type="Label" parent="CenterContainer/GridContainer" unique_id=1510218460]
+unique_name_in_owner = true
+layout_mode = 2
+text = "   no"
+label_settings = ExtResource("1_fwv6m")
+
+[node name="Cursor" type="Sprite2D" parent="." unique_id=1025244700]
+unique_name_in_owner = true
+position = Vector2(960, 540)
+texture = SubResource("GradientTexture2D_03ry3")

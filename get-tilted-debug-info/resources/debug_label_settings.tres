@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://dclnvj0j8kprx"]
+
+[ext_resource type="FontFile" uid="uid://c0d5jv4nebxu" path="res://fonts/RobotoMono-Regular.ttf" id="1_ux64e"]
+
+[resource]
+font = ExtResource("1_ux64e")
+font_size = 48
+font_color = Color(0, 0, 0, 1)
